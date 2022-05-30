@@ -1,22 +1,25 @@
 {
-  "name": "team-profile-generator",
+  "name": "team-builder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lauraantunez024/Team-Profile-Generator.git"
+    "url": "git+https://github.com/lauraantunez024/Team-Builder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lauraantunez024/Team-Profile-Generator/issues"
+    "url": "https://github.com/lauraantunez024/Team-Builder/issues"
   },
-  "homepage": "https://github.com/lauraantunez024/Team-Profile-Generator#readme",
+  "homepage": "https://github.com/lauraantunez024/Team-Builder#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^28.1.0"
