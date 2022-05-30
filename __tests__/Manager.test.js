@@ -28,11 +28,7 @@ describe('Manager', () =>{
             expect(managerRole).toBe(role);
         });
 
-
     });
-
-
-
 })
 
  
