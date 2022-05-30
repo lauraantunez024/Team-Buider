@@ -33,7 +33,7 @@ describe('Employee', () =>{
 
         it("should set email using the constructor arguments", () => {
             // Arrange
-            const email = "Aku@mailinator.com";
+            const email = "Aku@test.com";
             // Act
             const employee = new Employee("Aku", 666, email); 
             // Assert
@@ -44,7 +44,46 @@ describe('Employee', () =>{
     });
 
     describe("Get Method", () => {
-        
+        it("should get employee name using getName()", () => {
+            // Arrange
+            const name = "Aku";
+            // Act
+            const employee = new Employee(name, 666, "aku@test.com"); 
+            const employeeName = employee.getName();
+            // Assert
+            expect(employeeName).toBe(name);
+
+        });
+        it("should get employee id using getId()", () => {
+            // Arrange
+            const id = "Aku";
+            // Act
+            const employee = new Employee("Aku", id, "aku@test.com"); 
+            const employeeId = employee.getId();
+            // Assert
+            expect(employeeId).toBe(id);
+
+        });
+        it("should get employee email using getEmail()", () => {
+            // Arrange
+            const email = "Aku";
+            // Act
+            const employee = new Employee("Aku", 666, email); 
+            const employeeEmail = employee.getEmail();
+            // Assert
+            expect(employeeEmail).toBe(email);
+        });
+        it("should get employee role using getRole()", () => {
+            // Arrange
+            const role = "Employee";
+            // Act
+            const employee = new Employee("Aku", 666, "aku@test.com"); 
+            const employeeRole = employee.getRole();
+            // Assert
+            expect(employeeRole).toBe(role);
+        });
+      
+
 
 
 
