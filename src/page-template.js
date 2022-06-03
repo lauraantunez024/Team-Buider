@@ -11,6 +11,8 @@ function renderInterns(interns) {
 function teamGenerator(teamMembers) {
     return `
         ${renderManager(teamMembers.manager)}
+        ${renderEngineers(teamMembers.engineer)}
+        ${renderInterns(teamMembers.intern)}
 
     `
 

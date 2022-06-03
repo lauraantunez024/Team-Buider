@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest --verbose"
+
   },
   "repository": {
     "type": "git",
