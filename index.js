@@ -20,13 +20,12 @@ function createManager() {
     {
         type: 'input',
         name: 'managerName',
-        message: "Manager name",
         validate: (a) =>
         {
         if (a !== '') {
             return true
         }
-        return "Your name, please?";
+        return "Your name, please";
         }
     },
     {
@@ -75,7 +74,7 @@ function createManager() {
             a.managerID,
             a.managerEmail,
             a.managerNumber
-        )
+        );
         teamMembers.manager = manager
         idArray.push(a.managerID)
         buildTeam();
@@ -89,7 +88,8 @@ function buildTeam() {
             console.log(err);
 
         }
+        return console.log("Your Team Profile is ready!")
     })
 }
 
-buildTeam();
+createManager();
