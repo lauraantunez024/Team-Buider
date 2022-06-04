@@ -55,6 +55,8 @@ function renderInterns(intern) {
     </div>
   </div>
          `
+         return markup.join(",");
+
 }
 
 function teamGenerator(teamMembers) {
@@ -118,6 +120,7 @@ function render(teamMembers) {
     </html>
         
     `
+    
 };
 
 module.exports = render;

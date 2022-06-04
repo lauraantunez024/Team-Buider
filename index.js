@@ -20,6 +20,7 @@ function createManager() {
     {
         type: 'input',
         name: 'managerName',
+        message: "Manager name?",
         validate: (a) =>
         {
         if (a !== '') {
@@ -31,7 +32,7 @@ function createManager() {
     {
         type: 'input',
         name: 'managerID',
-        message: "Manager ID",
+        message: "Manager ID?",
         validate: (a) => 
         {
         const pass = a.match(/^[1-9]\d*$/)
@@ -44,10 +45,10 @@ function createManager() {
     {
         type: 'input',
         name: 'managerEmail',
-        message: "Manager Email",
+        message: "Manager Email?",
         validate: (a) => 
         {
-        const pass = a.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+        const pass = a.match(/\S+@\S+\.\S+/)
         if (pass) {
             return true
         }
@@ -57,10 +58,10 @@ function createManager() {
     {
         type: 'input',
         name: 'managerNumber',
-        message: "Manager Office Number xxx-xxx-xxxx",
+        message: "Manager Office Number?",
         validate: (a) => 
         {
-        const pass = a.match(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/)
+        const pass = a.match(/^[1-9]\d*$/)
         if (pass) {
             return true
         }
@@ -87,6 +88,7 @@ function addEngineer() {
     {
         type: 'input',
         name: 'engineerName',
+        message: "Engineer's name?",
         validate: (a) =>
         {
         if (a !== '') {
@@ -98,7 +100,7 @@ function addEngineer() {
     {
         type: 'input',
         name: 'engineerID',
-        message: "Engineer ID",
+        message: "Enginee's ID?",
         validate: (a) => 
         {
         const pass = a.match(/^[1-9]\d*$/)
@@ -111,7 +113,7 @@ function addEngineer() {
     {
         type: 'input',
         name: 'engineerEmail',
-        message: "Manager Email",
+        message: "Engineer's Email?",
         validate: (a) => 
         {
         const pass = a.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -124,6 +126,7 @@ function addEngineer() {
     {
         type: 'input',
         name: 'engineerGithub',
+        message: "Engineer's github username?",
         validate: (a) =>
         {
         if (a !== '') {
@@ -152,6 +155,7 @@ function addIntern() {
     {
         type: 'input',
         name: 'internName',
+        message: "Intern name?",
         validate: (a) =>
         {
         if (a !== '') {
@@ -163,7 +167,7 @@ function addIntern() {
     {
         type: 'input',
         name: 'internID',
-        message: "Intern ID",
+        message: "Intern's ID?",
         validate: (a) => 
         {
         const pass = a.match(/^[1-9]\d*$/)
@@ -176,7 +180,7 @@ function addIntern() {
     {
         type: 'input',
         name: 'internEmail',
-        message: "Intern Email",
+        message: "Intern's Email?",
         validate: (a) => 
         {
         const pass = a.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -189,6 +193,7 @@ function addIntern() {
     {
         type: 'input',
         name: 'internSchool',
+        message: "Intern's school?",
         validate: (a) =>
         {
         if (a !== '') {
