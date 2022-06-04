@@ -3,17 +3,13 @@ function renderManager(manager) {
     <div class="row">
     <div class="col s12 m7">
       <div class="card">
-        <div class="card-image">
-          <img src="https://www.shareicon.net/data/128x128/2016/04/10/747396_people_512x512.png">
-          <span class="card-title">${manager.getName()}</span>
-        </div>
+          <span class="card-title">${manager.getName()}</span> <i class="fa-solid fa-briefcase"></i>
         <div class="card-content">
           <ul>
           <li class="role"> ${manager.getRole()} </li>
           <li>ID: ${manager.getId()} </li>
-          <li>Email: ${manager.getEmail()} </li>
+          <li>Email: <a href "mailto:${manager.getEmail()}>${manager.getEmail()}</a></li>
           <li>Office Number: ${manager.getNumber()} </li>
-
           </ul>
         </div>
       </div>
@@ -21,11 +17,44 @@ function renderManager(manager) {
   </div>
          `
 }
-function renderEngineers(engineers) {
-    return 'engineer'
+function renderEngineers(engineer) {
+    return `
+    <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+          <span class="card-title">${engineer.getName()}</span><i class="fa-solid fa-user-gear"></i>
+        <div class="card-content">
+          <ul>
+          <li class="role"> ${engineer.getRole()} </li>
+          <li>ID: ${engineer.getId()} </li>
+          <li>Email:<a href "mailto:${engineer.getEmail()}>${engineer.getEmail()}</a></li>
+          <li>Github: <a href="github.com/${engineer.getGithub()}"> ${engineer.getGithub()} </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+         `
 }
-function renderInterns(interns) {
-    return 'intern'
+function renderInterns(intern) {
+    return `
+    <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+          <span class="card-title">${intern.getName()}</span> <i class="fa-solid fa-graduation-cap"></i>
+        <div class="card-content">
+          <ul>
+          <li class="role"> ${intern.getRole()} </li>
+          <li>ID: ${intern.getId()} </li>
+          <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()} </a></li>
+          <li>School: ${intern.getSchool()} </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+         `
 }
 
 function teamGenerator(teamMembers) {
@@ -47,37 +76,46 @@ function render(teamMembers) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Team </title>
+        <title>My Team </title>
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" width="50px" height="auto">
         <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+        <script src="https://kit.fontawesome.com/7ace23f043.js" crossorigin="anonymous"></script> 
         </head>
     
     <style>
-
     .role {
         font-weight: bold;
     }
 
-    img {
-        width: 25px;
-        height: auto;
-      }
-        
+    .card-title {
+        margin-left: 25px;
+    }
+
+    .card-title{
+        margin-right: 10px;
+    }
+
+    .nav-wrapper {
+        text-align: center;
+    }
     </style>
+
     <body>
+        <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">My Team</a>
+        </div>
+        </nav>
 
     <div class = "container">
    
-
     ${teamGenerator(teamMembers)}
     </div>
         
     </body>
     </html>
-    
-    
         
     `
 };
